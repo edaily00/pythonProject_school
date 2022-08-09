@@ -116,7 +116,7 @@ class PlayerD(Player):
         self._final_steps = ["D1", "D2", "D3", "D4", "D5", "D6", "E"]
 
 
-class Game:
+class LudoGame:
 
     def __init__(self):
         self._players = {}
@@ -309,12 +309,17 @@ class Game:
 
         return positions
 
-"""list_of_players = ("C", "A")
-list_of_turns = [('A', 6), ('A', 4), ('a', 6), ("a", 4), ('a', 48), ('a', 8), ('a', 4)]
+    """
+
+players = ['A','B']
+turns = [('B', 6),('B', 4),('B', 5),('B', 4),('B', 4),('B', 3),('B', 4),('B', 5),('B', 4),('B', 4),('B', 5),('B', 4),('B', 1),('B',
+4),('B', 5),('B', 5),('B', 5)]
 
 new = Game()
 
-current = new.play_game(list_of_players, list_of_turns)
+current = new.play_game(players, turns)
+
+print(current)
 
 playera = new.get_player_by_position("a")
 playerc = new.get_player_by_position('c')
